@@ -1,15 +1,16 @@
 package com.bhavya.springboot.myfirstwebapp.login;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class LoginController {
 
-    // src/main/resources/META-INF/resources/WEB-INF/jsp/login.jsp
     @RequestMapping("/login")
-    public String logInJsp() {
+    public String logInJsp(@RequestParam String name, ModelMap model) {
+        model.put("name", name);
         return "login";
     }
 }
