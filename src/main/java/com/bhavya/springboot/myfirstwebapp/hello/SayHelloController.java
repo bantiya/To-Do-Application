@@ -30,7 +30,7 @@ public class SayHelloController {
     }
 
     // src/main/resources/META-INF/resources/WEB-INF/jsp/sayHello.jsp
-    @RequestMapping("/say-hello-jsp")
+    @RequestMapping("say-hello-jsp")
     public String sayHelloJsp() {
         return "sayHello";
     }
