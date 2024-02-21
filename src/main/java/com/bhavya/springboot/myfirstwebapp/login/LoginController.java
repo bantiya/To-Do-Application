@@ -17,6 +17,8 @@ public class LoginController {
     public String logInJsp(@RequestParam String name, ModelMap model) {
 
         model.put("name", name);
+
+        // Logging the name of the person or the Request param that we get:
         logger.debug("Request param is :{}",name);
         System.out.println("Request param is " + name);
         return "login";
